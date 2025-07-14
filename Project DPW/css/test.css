@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/background.png);
+}
+
+/* Header */
+
+#header {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    background-color: #2F3439;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #F2F2F2;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    gap: 5px;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #F2F2F290;
+}
+
+.nav-link svg,
+.nav-link path {
+    fill: #F2F2F290;
+    height: 1.5rem;
+    width: 1.5rem;
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #F2F2F2;
+    background-color: #F15A0E;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03); /* sedikit membesar saat hover */
+}
+
+.nav-link:active {
+    transform: scale(0.96); /* efek ditekan */
+}
+
+.nav-link:hover svg,
+.nav-link.active svg {
+    transform: rotate(-3deg); /* animasi ringan pada ikon */
+}
+
+.nav-link.active path,
+.nav-link:hover path {
+    fill: #F2F2F2;
+}
+
+/* Content */
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: center;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#content {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.row {
+    background-color: #2F3439;
+    color: white;
+    border-radius: 1rem;
+    margin: auto 10rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.row h1, .row h2 {
+    margin: auto;
+}
+.line {
+    width: 100%;
+    height: 0.2rem;
+    border-radius: 100px;
+    margin-top: 0.5rem;
+    background: linear-gradient(90deg, #F15A0E, #FFC107);
+}
+.judul{
+    text-align: center;
+}
+.aturan h2 {
+    text-align: center;
+}
+.struktur {
+    text-align: center;
+}
+
+.table-wrapper {
+    display: flex;
+    justify-content: center;
+    border: 2px solid #818181;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+.table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.struktur-table th,
+.struktur-table td {
+    padding: 0.5rem;
+    text-align: center;
+}
+.struktur a {
+    text-decoration: none;
+}
+.btn {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    gap: 0.5rem;
+    border: none;
+    padding: 1rem 1.5rem;   
+    color: #F2F2F2;
+    border-radius: 100px;
+    background: linear-gradient(90deg, #F15A0E, #FFC107);
+    cursor: pointer;
+    transition:
+        background 0.4s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(241, 90, 14, 0.5);
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+/* Footer */
+
+#footer {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: #F2F2F290;
+    background-color: #2F3439;
+
+}
+
+.contact {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact a {
+    text-decoration: none;
+}
+
+.contact a path {
+    fill: #F2F2F290;
+}
